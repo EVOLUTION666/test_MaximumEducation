@@ -21,7 +21,7 @@ class DetailsViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -31,7 +31,7 @@ class DetailsViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -97,12 +97,12 @@ class DetailsViewController: UIViewController {
             newsImageView.heightAnchor.constraint(equalToConstant: 300),
 
             titleLabel.topAnchor.constraint(equalTo: newsImageView.bottomAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
 
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            descriptionLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            descriptionLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            descriptionLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            descriptionLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
             descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.bottomAnchor),
         ])
     }
